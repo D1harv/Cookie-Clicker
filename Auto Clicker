@@ -1,0 +1,8 @@
+// 自動クリック
+var timer = setInterval(function(){Game.ClickCookie();}, 4);
+
+// ゴールデンクッキーのポップ
+Game.goldenCookie.minTime = 0; Game.goldenCookie.spawn(); Game.goldenCookie.click();
+
+// ゴールデンクッキーの効果
+Game.goldenCookie.choose=function() { var list=['blood frenzy', 'click frenzy']; if (Game.goldenCookie.last!='' && list.indexOf(Game.goldenCookie.last)!=-1) list.splice(list.indexOf(Game.goldenCookie.last),1); var choice=choose(list); return choice; }
